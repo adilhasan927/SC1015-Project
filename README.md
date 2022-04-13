@@ -1,8 +1,8 @@
-# Restaurant Clustering Model
+# SC1015 Mini-Project
 
 ## Description
 
-As part of the mini-project for SC1015, our group has decided to explore the different clusters of restaurant found on the website [OpenRice](https://sg.openrice.com/en/singapore)
+As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore)
 
 ## Contents
 
@@ -13,25 +13,25 @@ As part of the mini-project for SC1015, our group has decided to explore the dif
 
 ## Problem
 
-- To identify groups of restaurants that are similar based on variables such as pricing, cuisine and location
-- To recommend a suitable restaurant using the clusters generated
+- To identify complex patterns in our dataset of scraped restaurants and consequently recommend unfilled niches for entrepreneurs to explore.
 
 ## Project Flow
 
-- Implemented web-scrapping to gather data from [OpenRice](https://sg.openrice.com/en/singapore)
+- Implemented web-scraping to gather data from [OpenRice](https://sg.openrice.com/en/singapore)
 - Data consisted of numerical and categorical data types which needed to be cleaned
 - Certain categorical data consisted of a few variable which needed to be one-hot encoded
-- Performed EDA on each vairables starting from univariate to bivariate analysis
+- Performed EDA on each vairables, consisting of univariate and bivariate analysis
 - Location data loaded into a new file to utilise Folium package
-- Clustering analysis implemented the K-modes model
+- Clustering analysis implemented the K-Prototypes algorithm
 - Began with normalising dataset and plotting the elbow curve to find suitable number of clusters
-- Utilised the UMAP and Spaghetti to visualise the clusters generated
+- Utilised the UMAP dimensionality reduction algorithm to visualise our dataset
+- Used spaghetti plot to visualise the clusters generated
 
 ## Learning Outcomes
 
-- Web-scrapping using API
+- Web-scraping using API
 - Folium package for map visualisation
-- Implementation of K-Modes modelling
+- Implementation of K-Prototypes clustering
 - UMAP visualisation
 - Spaghetti visualisation
 
