@@ -6,10 +6,12 @@ The command then used to scrape SG Openrice was as follows.
 
 `wayback_machine_downloader https://sg.openrice.com/en/singapore/r-* --only "/index\.html$/i" --from 2020`
 
-We added the `--from` condition so that only page captures after the most recent redesign of the website would be included, so that our files would have a common HTML structure. After doing so, we obtained 4,438 pages, each corresponding to a restaurant.
+We added the `--from` condition so that only page captures after the most recent redesign of the website would be included, so that our files would have a common HTML structure. After doing so, we obtained 4,438 pages. About 400 didn't match our desired format, leaving 4,004 restaurants. 
 
-The folder in this directory labelled `websites` contains the results of our scraping. The pages in this folder follow the format of `websites/sg.openrice.com/en/singapore/r-{restaurant name}/index.html`, substituting the name of the restaurant for `{restaurant name}`.
+The 7zip-compressed folder in this directory labelled `websites` contains the results of our scraping. The pages in this folder follow the format of `websites/sg.openrice.com/en/singapore/r-{restaurant name}/index.html`, substituting the name of the restaurant for `{restaurant name}`.
 
 We then used the Beautiful Soup Python package to parse the HTML in these files and produced a CSV containing the features we managed to extract, creating our initial dataset. The features we managed to extract were restaurant name, rating, # of reviews, price, cuisines, and street address.
+
+This can be done by running the provided script `extract.py`. It produces 3998 rows of data in `features_no_gps.csv`; a few pages are excluded for not being valid UTF-8 text or not following the HTML format we use.
 
 Lastly, we augmented this dataset by using the API at [PositionStack](https://positionstack.com/) to convert our street addresses into GPS coordinates. At this point we were ready to go into the next stage of data cleaning.
