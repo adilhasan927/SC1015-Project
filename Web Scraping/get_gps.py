@@ -27,7 +27,7 @@ for i in tqdm(data_rows):
 
 print(data_rows[0])
 
-with open('features.csv', mode='w', newline="", encoding='utf-8') as csv_file:
+with open('../Data/features.csv', mode='w', newline="", encoding='utf-8') as csv_file:
     writer = csv.writer(csv_file)
     writer.writerow(colnames)
     writer.writerows(data_rows)

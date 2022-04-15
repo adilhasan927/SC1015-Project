@@ -6,14 +6,15 @@ As part of the mini-project for SC1015, our group has decided to explore the dat
 
 ## Contents
 
-1. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Datasets/Data%20Cleaning.ipynb)
-2. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
-3. [Location EDA](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Location%20EDA.ipynb)
-4. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
+1. [Web Scraping](http://github.com/adilhasan927/SC1015-Project/Web%20Scraping/Scraping.md)
+2. [Produced Dataset](https://github.com/adilhasan927/SC1015-Project/Data/features.csv)
+3. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Datasets/Data%20Cleaning.ipynb)
+4. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
+5. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
 
 ## Problem
 
-- To identify complex patterns in our dataset of scraped restaurants and consequently recommend unfilled niches for entrepreneurs to explore.
+- How can we, using our dataset of SG restauarants and provided with the details of previous restaurants someone has eaten at, come up with restaurant recommendations which are a) in some novel/different from what they have previously experienced, but b) not too different, i.e. otherwise similar to their previous experience?
 
 ## Project Flow
 
@@ -25,15 +26,13 @@ As part of the mini-project for SC1015, our group has decided to explore the dat
 - Clustering analysis implemented the K-Prototypes algorithm
 - Began with normalising dataset and plotting the elbow curve to find suitable number of clusters
 - Utilised the UMAP dimensionality reduction algorithm to visualise our dataset
-- Used spaghetti plot to visualise the clusters generated
 
 ## Learning Outcomes
 
 - Web-scraping using API
-- Folium package for map visualisation
+- Geographic map visualisation
 - Implementation of K-Prototypes clustering
 - UMAP visualisation
-- Spaghetti visualisation
 
 ## References
 
