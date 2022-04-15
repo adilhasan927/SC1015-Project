@@ -6,11 +6,24 @@ As part of the mini-project for SC1015, our group has decided to explore the dat
 
 ## Contents
 
+<<<<<<< HEAD
 1. [Web Scraping](http://github.com/adilhasan927/SC1015-Project/Web%20Scraping/Scraping.md)
 2. [Produced Dataset](https://github.com/adilhasan927/SC1015-Project/Data/features.csv)
 3. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Datasets/Data%20Cleaning.ipynb)
 4. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
 5. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
+||||||| 9b67c36
+1. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Datasets/Data%20Cleaning.ipynb)
+2. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
+3. [Location EDA](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Location%20EDA.ipynb)
+4. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
+=======
+1. [Web Scraping](https://github.com/adilhasan927/SC1015-Project/blob/main/Web%20Scraping/Scraping.md)
+2. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Data%20Cleaning%20%26%20Datasets/Data%20Cleaning.ipynb)
+3. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
+4. [Location EDA](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Location%20EDA.ipynb)
+5. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
+>>>>>>> 623d85232c29fccdd28f197cd1a1877813479c20
 
 ## Problem
 
