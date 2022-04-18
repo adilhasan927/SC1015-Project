@@ -6,7 +6,7 @@ As part of the mini-project for SC1015, our group has decided to explore the dat
 
 ## Prereqs
 
-You will need to install geopandas. For this, go into Anaconda Navigator and create a new conda environment. Then, open a terminal in this conda environment and run `conda install geopandas` and `conda install nb_conda`. Then, before starting jupyter, run `source activate <environment name>` in a terminal. 
+You will need to install geopandas for a specific visualisation. For this, go into Anaconda Navigator and create a new conda environment. Then, open a terminal in this conda environment and run `conda install geopandas jupyter nb_conda_kernels scikit-learn pandas seaborn matplotlib`. Then run `conda activate <environment name>` in an Anaconda prompt, then run `python -m notebook`.
 
 ## Contents
 
