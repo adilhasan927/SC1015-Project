@@ -4,6 +4,10 @@
 
 As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore)
 
+## Prereqs
+
+You will need to install geopandas. For this, go into Anaconda Navigator and create a new conda environment. Then, open a terminal in this conda environment and run `conda install geopandas` and `conda install nb_conda`. Then, before starting jupyter, run `source activate <environment name>` in a terminal. 
+
 ## Contents
 
 1. [Web Scraping](http://github.com/adilhasan927/SC1015-Project/Web%20Scraping/Scraping.md)
