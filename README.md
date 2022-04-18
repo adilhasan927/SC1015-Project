@@ -8,6 +8,10 @@ As part of the mini-project for SC1015, our group has decided to explore the dat
 
 You will need to install geopandas for a specific visualisation. For this, go into Anaconda Navigator and create a new conda environment. Then, open a terminal in this conda environment and run `conda install geopandas jupyter nb_conda_kernels scikit-learn pandas seaborn matplotlib`. Then run `conda activate <environment name>` in an Anaconda prompt, then run `python -m notebook`.
 
+This visualisation is towards the end of our EDA and will simply error if it is unable to find geopandas.
+
+Warning: For unknown reasons, on my system, after following this process, the first time the button to rerun all cells from the beginning is pressed will cause Jupyter to have issues and require manual killing and restarting. It should work fine after this.
+
 ## Contents
 
 1. [Web Scraping](http://github.com/adilhasan927/SC1015-Project/Web%20Scraping/Scraping.md)
