@@ -19,6 +19,7 @@ Warning: For unknown reasons, on my system, after following this process, the fi
 3. [Data Cleaning](https://github.com/adilhasan927/SC1015-Project/blob/main/Datasets/Data%20Cleaning.ipynb)
 4. [Exploratory Data Analysis](https://github.com/adilhasan927/SC1015-Project/blob/main/EDA/Exploratory%20Data%20Analysis.ipynb)
 5. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
+6. [Model Application](https://github.com/adilhasan927/SC1015-Project/blob/main/Model%20Application/Model%20Application.ipynb)
 
 ## Problem
 
