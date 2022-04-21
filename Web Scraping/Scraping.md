@@ -14,4 +14,4 @@ We then used the Beautiful Soup Python package to parse the HTML in these files 
 
 This can be done by running the provided script `extract.py`. It produces 3998 rows of data in `features_no_gps.csv`; a few pages are excluded for not being valid UTF-8 text or not following the HTML format we use.
 
-Lastly, we augmented this dataset by using the API at [PositionStack](https://positionstack.com/) to convert our street addresses into GPS coordinates. At this point we were ready to go into the next stage of data cleaning.
+Lastly, we augmented this dataset by using the API at [PositionStack](https://positionstack.com/) to convert our street addresses into GPS coordinates. At this point, we were ready to go into the next stage of data cleaning.
