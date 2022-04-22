@@ -2,15 +2,36 @@
 
 ## Description
 
-As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore)
+As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore). 
+
+## Problem Statement.
+
+The problem statement we came up with is as follows.
+
+> How can we, using our dataset of SG restauarants and provided with the details of previous restaurants someone has eaten at, come up with restaurant recommendations which are a) in some sense novel/different from what they have previously experienced, but b) not too different, i.e. otherwise similar to their previous experience?
+
+Of course, this is rather vague, and we had to reformulate it to make it more clear. After doing so, this is what we arrived at.
+
+1. Identify clusters in our restaurant data and tag restaurants with them.
+
+2. Take a list of the restaurants a user has already visited.
+
+3. Find a few clusters they are collectively furthest from -- This is the step of finding "novelty".
+
+4. From within those clusters, recommend restaurants at a similar position relative to their cluster centroid compared to the restaurants a user has already been to -- This is the "otherwise similar" step.
+
 
 ## Prereqs
 
-You will need to install geopandas for a specific visualisation. For this, go into Anaconda Navigator and create a new conda environment. Then, open a terminal in this conda environment and run `conda install geopandas jupyter nb_conda_kernels scikit-learn pandas seaborn matplotlib`. Then run `conda activate <environment name>` in an Anaconda prompt, then run `python -m notebook`.
+You will need to install certain packages. For this, go into Anaconda Navigator and create a new conda environment. Then, through Anaconda  Navigator open a terminal in this conda environment and run the following commands.
 
-This visualisation is towards the end of our EDA and will simply error if it is unable to find geopandas.
+1. `conda install geopandas jupyter nb_conda_kernels scikit-learn pandas seaborn matplotlib`.
 
-Warning: For unknown reasons, on my system, after following this process, the first time the button to rerun all cells from the beginning is pressed will cause Jupyter to have issues and require manual killing and restarting. It should work fine after this.
+2. `conda install -c conda-forge LightGBM shap kmodes umap-learn`
+
+In order to start a notebook in this environment, run `conda activate <environment name>` in an Anaconda prompt, then run `python -m notebook`.
+
+Warning: For unknown reasons, on my system, after following this process, the first time the button to rerun all cells from the beginning is pressed will cause Jupyter to have issues and require manual killing and restarting. The button to individually run cells works fine.
 
 ## Contents
 
@@ -21,9 +42,6 @@ Warning: For unknown reasons, on my system, after following this process, the fi
 5. [Clustering Model](https://github.com/adilhasan927/SC1015-Project/blob/main/Clustering%20Model/Clustering.ipynb)
 6. [Model Application](https://github.com/adilhasan927/SC1015-Project/blob/main/Model%20Application/Model%20Application.ipynb)
 
-## Problem
-
-- How can we, using our dataset of SG restauarants and provided with the details of previous restaurants someone has eaten at, come up with restaurant recommendations which are a) in some novel/different from what they have previously experienced, but b) not too different, i.e. otherwise similar to their previous experience?
 
 ## Project Flow
 
