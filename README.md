@@ -78,7 +78,7 @@ Warning: For unknown reasons, on my system, after following this process, the fi
 
 ## Contributions
 
-We all worked on various aspects of the project. Irfan and Syed did work on the preliminary research of datasets, the cleaning, the EDA and on researching things like K-Prototypes, Adil also worked on the EDA and cleaning and worked on implementing the scraping, the ML model training/application and the visualisations, and the video.
+We all worked on various aspects of the project. Irfan and Syed did work on the preliminary research of datasets, the cleaning, the EDA and on researching the model, Adil also worked on the EDA and cleaning and worked on implementing the scraping, researching and implementing the ML model training/application and the visualisations, and the video.
 
 ## References
 
