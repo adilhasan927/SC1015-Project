@@ -2,23 +2,31 @@
 
 ## Description
 
-As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore). 
+As part of the mini-project for SC1015, our group has decided to explore the dataset of Singapore restaurants found on the website [OpenRice](https://sg.openrice.com/en/singapore), with an eye towards recommending people novel, interesting and enjoyable experiences. 
 
-## Problem Statement.
+## Problem Statement & Solution.
 
 The problem statement we came up with is as follows.
 
-> How can we, using our dataset of SG restauarants and provided with the details of previous restaurants someone has eaten at, come up with restaurant recommendations which are a) in some sense novel/different from what they have previously experienced, but b) not too different, i.e. otherwise similar to their previous experience?
+> using just our OpenRice data and the restaurant history of a user, how well can we recommend them a restaurant which is going to be an novel and interesting experience for them – that is, in some important way different from their past choices, but in other regards similar enough that they won’t have too much of a “culture shock” and will be able to enjoy themselves?
 
-Of course, this is rather vague, and we had to reformulate it to make it more clear. After doing so, this is what we arrived at.
+After our EDA, we decided to use clustering to satisfy the "important way different" criterion, as a clustering algorithm ultimately seeks to find clusters which are in some respect substantially distinct from each other.
 
-1. Identify clusters in our restaurant data and tag restaurants with them.
+Having trained our clustering model and labelled our data, we decided to try the following steps to recommend users restaurants.
 
-2. Take a list of the restaurants a user has already visited.
+1. Take a list of the restaurants a user has already visited.
 
-3. Find a few clusters they are collectively furthest from -- This is the step of finding "novelty".
+2. Find a few clusters they are collectively furthest from -- This is the step of finding "novelty" or "important way different".
 
-4. From within those clusters, recommend restaurants at a similar position relative to their cluster centroid compared to the restaurants a user has already been to -- This is the "otherwise similar" step.
+3. From within those clusters, recommend restaurants  -- This is the "in other regards similar" step.
+
+4. Reduce the importance of further-back history items by application of a scaling factor and put a cap on the length of history considered, as otherwise it would become the case that as their history grows new restaurants a user visits would have a progressively smaller impact on distances and cause a correspondingly small change in recommendations, resulting in staleness.
+
+We simulated 250 users making use of this procedure for recommendation, starting them off with a random restaurant in their history and having them go to restaurants we suggest as we iterated on the simulation. We also devised certain metrics, which showed our model to not be performing that well.
+
+We then identified the issue through comparision with a previous visualisation and reacted by modifying step 2 to simply find random clusters the user has not visited. This consequently improved our metrics substantially.
+
+More elaboration on what we did is in our video.
 
 
 ## Prereqs
@@ -45,28 +53,38 @@ Warning: For unknown reasons, on my system, after following this process, the fi
 
 ## Project Flow
 
-- Implemented web-scraping to gather data from [OpenRice](https://sg.openrice.com/en/singapore)
-- Data consisted of numerical and categorical data types which needed to be cleaned
-- Certain categorical data consisted of a few variable which needed to be one-hot encoded
-- Performed EDA on each vairables, consisting of univariate and bivariate analysis
-- Location data loaded into a new file to utilise Folium package
-- Clustering analysis implemented the K-Prototypes algorithm
-- Began with normalising dataset and plotting the elbow curve to find suitable number of clusters
-- Utilised the UMAP dimensionality reduction algorithm to visualise our dataset
+- Implemented web-scraping to save web-pages from [OpenRice](https://sg.openrice.com/en/singapore)
+- Used Beautiful Soup python library to parse web-pages.
+- Performed data cleaning. Dealt with duplicated data and missing data, as well as data encoded in inconvenient forms. Price was transformed from an interval to the midpoint of the interval. Cuisine was transformed from a string of tags seperated by slashes and commas to a) a list of indices into a list of cuisines and b) 52 columns containing either 1 or 0.
+- Trained K-Prototypes
+- Made use of UMAP visualisation to visualise clusters
+- Trained classifier to predict K-Prototypes labels, used classifer to measure cluster distinctiveness and relative importance of features.
+- Implemented an attempt at a recommender system
+- Simulated useage of recommender system, used visualisation and metrics to identify issue.
+- Fixed recommender system and noted improved metrics.
+- Project conclusion.
 
 ## Learning Outcomes
 
-- Web-scraping using API
-- Geographic map visualisation
-- Implementation of K-Prototypes clustering
-- UMAP visualisation
+- Web-scraping and parsing of scraped HTML web-pages
+- Useage of an online API to automatically convert street addresses to GPS coords.
+- Geographic map visualisation.
+- Implementation of K-Prototypes clustering.
+- UMAP visualisation.
+- Objectively & empirically judging distinctiveness of clusters by training classifier to predict them.
+- Useage of SHAP feature importance
+- Experience designing and testing an application which makes use of an ML model.
+- Practical recommendation to avoid duplication of effort in recommender system, elaborated on at end of video.
 
 ## References
 
 - https://pypi.org/project/kmodes/
+- https://geopandas.org/en/stable/
+- https://lightgbm.readthedocs.io/en/latest/
+- https://umap-learn.readthedocs.io/en/latest/
+- https://antonsruberts.github.io/kproto-audience/
+- https://positionstack.com/
+- https://github.com/hartator/wayback-machine-downloader
 - https://towardsdatascience.com/the-k-prototype-as-clustering-algorithm-for-mixed-data-type-categorical-and-numerical-fe7c50538ebb
 - https://towardsdatascience.com/evaluation-metrics-for-recommender-systems-df56c6611093
 - https://medium.com/analytics-vidhya/customer-segmentation-using-k-prototypes-algorithm-in-python-aad4acbaaede
-- https://antonsruberts.github.io/kproto-audience/
-- https://medium.com/analytics-vidhya/fastest-way-to-install-geopandas-in-jupyter-notebook-on-windows-8f734e11fa2b
-- https://medium.com/datasciencearth/map-visualization-with-folium-d1403771717
