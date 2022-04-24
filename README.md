@@ -76,6 +76,10 @@ Warning: For unknown reasons, on my system, after following this process, the fi
 - Experience designing and testing an application which makes use of an ML model.
 - Practical recommendation to avoid duplication of effort in recommender system, elaborated on at end of video.
 
+## Contributions
+
+We all worked on various aspects of the project. Irfan and Syed did work on the preliminary research of datasets, the cleaning, the EDA and on researching things like K-Prototypes, Adil also worked on the EDA and cleaning and worked on implementing the scraping, the ML model training/application and the visualisations, and the video.
+
 ## References
 
 - https://pypi.org/project/kmodes/
